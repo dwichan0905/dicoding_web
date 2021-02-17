@@ -19,6 +19,10 @@ h2, h3 {
     color: #00a2c6;
 }
 
+header {
+    display: inline;
+}
+
 footer {
     padding: 20px;
     color: white;
@@ -30,6 +34,8 @@ footer {
 nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
@@ -88,4 +94,11 @@ aside {
 #content {
     float: left;
     width: 75%;
+}
+
+@media screen and (max-width: 1000px) {
+    #content, aside {
+        width: 100%;
+        padding: 0;
+    }
 }
