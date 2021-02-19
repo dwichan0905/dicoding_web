@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    background-color: orange;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.nav-left {
+    display: flex;
+    float: left;
+}
+
+.nav-left h3 {
+    font-family: 'Truculenta', sans-serif;
+}
+
+.nav-center {
+    align-content: center;
+    width: 50%;
+}
+
+.nav-right {
+    display: flex;
+    right: 0;
+}
+
+nav img {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    margin: 10px 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 20px 10px 20px;
+    margin: 20px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.category h2 {
+    font-family: 'Truculenta', sans-serif;
+}
+
+.aside-left {
+    width: 25%;
+}
+
+nav .dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    list-style-type: none;
+    top: 35%;
+    margin-right: 20px;
+}
+  
+nav .dropdown-content {
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+ 
+nav .dropdown:hover {
+    font-weight: bold;
+}
+
+nav .dropdown-content {
+    font-weight: normal;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+    margin-top: 30px;
+}
+
+nav .dropdown-content p:hover {
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
