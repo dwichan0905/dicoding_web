@@ -1,3 +1,5 @@
+console.log("Berhasil load Collapsible.JS");
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
 

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -12,22 +16,22 @@ a {
 
 main {
     display: flex;
-    margin: 100px 50px 20px 50px;
+    margin: 70px 50px 20px 50px;
 }
 
 nav {
-    display: flex;
-    position: fixed;
-    width: 100%;
     background-color: lightskyblue;
-    top: 0;
+    display: flex;
     padding-left: 50px;
     padding-right: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav a {
-    display: flex;
     color: black;
+    display: flex;
 }
 
 nav a:hover {
@@ -37,7 +41,7 @@ nav a:hover {
 .nav-left {
     display: inline-flex;
     float: left;
-    width: 25%;
+    width: 200px;
 }
 
 .nav-left h3 {
@@ -45,39 +49,34 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.nav-center {
-    width: 50%;
-}
-
 .nav-right {
     display: flex;
+    position: relative;
     right: 0px;
 }
 
 nav img {
     display: flex;
-    width: 50px;
     height: 50px;
     margin: 10px 20px;
+    width: 50px;
 }
 
 nav .dropdown {
     cursor: pointer;
-    position: relative;
-    display: inline-flex;
+    display: flex;
     list-style-type: none;
-    top: 35%;
     margin-right: 20px;
+    position: relative;
+    top: 35%;
 }
   
 nav .dropdown-content {
-    display: none;
-    right: 0;
-    position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    display: none;
+    min-width: 230px;
+    position: absolute;
     z-index: 1;
 }
  
@@ -94,8 +93,14 @@ nav .dropdown:hover .dropdown-content {
     margin-top: 30px;
 }
 
+nav .dropdown-content p {
+    margin: 0;
+    padding: 10px;
+}
+
 nav .dropdown-content p:hover {
     font-weight: bold;
+    background-color: lightskyblue;
 }
 
 .card {
@@ -118,7 +123,9 @@ nav .dropdown-content p:hover {
     text-align: justify;
 }
 .posting header p {
+    color: #AAA;
     font-size: 10pt;
+    margin-top: -15px;
 }
 
 .posting section img {
@@ -126,12 +133,12 @@ nav .dropdown-content p:hover {
 }
 
 .profile img {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
     background-position: center center;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
 }
 
 .category h2, .profile h2 {
@@ -140,23 +147,23 @@ nav .dropdown-content p:hover {
 
 .aside-right {
     float: right;
-    width: 25%;
+    width: 30%;
 }
 
 .post-content {
-    width: 75%;
+    width: 70%;
 }
 
 .collapsible {
     background-color: white;
+    border: none;
     color: black;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
     font-size: 15px;
+    outline: none;
+    padding: 18px;
+    text-align: left;
+    width: 100%;
 }
   
 .active, .collapsible:hover {
@@ -164,22 +171,22 @@ nav .dropdown-content p:hover {
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
   
 .content {
-    padding: 0;
+    background-color: #f1f1f1;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    padding: 0;
 }
 
 .content li {
     list-style-type: none;
-    padding: 20px;
     margin-left: -10px;
+    padding: 20px;
 }
 
 .content li:hover {
@@ -188,10 +195,10 @@ nav .dropdown-content p:hover {
 }
 
 footer {
-    padding: 20px;
     background-color: white;
-    text-align: center;
     font-weight: bold;
+    padding: 20px;
+    text-align: center;
 }
 
 footer a {
@@ -202,19 +209,71 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.profile ul {
+    padding-inline-start: 0em;
+}
+
+.my-identity .photo, h3, .email {
+    text-align: center;
+    margin: 5px;
+}
+
+.description table > th, td {
+    padding: 5px;
+}
+
+th {
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+ul .role {
+    background-color: #ddd;
+    border-radius: 32px;
+    border: none;
+    color: black;
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10pt;
+    margin: 2px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1000px) {
     nav {
         padding: 0;
     }
 
+    .nav-right {
+        margin-right: 0;
+    }
+
     .post-content, .aside-right {
         display: inline-block;
-        width: 100%;
         padding: 0;
+        width: 100%;
     }
 
     main {
         display: inline-block;
-        margin: 100px 0px;
+        margin: 70px 0px 0px 0px;
+    }
+
+    .my-identity {
+        display: inline-flex;
+    }
+
+    .name-email {
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-left: 15px;
+    }
+
+    .email {
+        text-align: left;
+        padding: 0;
     }
 }
