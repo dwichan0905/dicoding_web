@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Truculenta:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 
 body {
     font-family: sans-serif;
@@ -10,14 +11,23 @@ a {
 }
 
 main {
-    margin-left: 10px;
-    margin-right: 10px;
+    display: flex;
+    margin: 100px 50px 20px 50px;
 }
 
 nav {
     display: flex;
-    position: sticky;
-    background-color: orange;
+    position: fixed;
+    width: 100%;
+    background-color: lightskyblue;
+    top: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav a {
+    display: flex;
+    color: black;
 }
 
 nav a:hover {
@@ -25,48 +35,30 @@ nav a:hover {
 }
 
 .nav-left {
-    display: flex;
+    display: inline-flex;
     float: left;
+    width: 25%;
 }
 
 .nav-left h3 {
     font-family: 'Truculenta', sans-serif;
+    margin-top: 10px;
 }
 
 .nav-center {
-    align-content: center;
     width: 50%;
 }
 
 .nav-right {
     display: flex;
-    right: 0;
+    right: 0px;
 }
 
 nav img {
     display: flex;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     margin: 10px 20px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 5px 20px 10px 20px;
-    margin: 20px;
-}
-
-.card h2 {
-    margin-bottom: 20px;
-}
-
-.category h2 {
-    font-family: 'Truculenta', sans-serif;
-}
-
-.aside-left {
-    width: 25%;
 }
 
 nav .dropdown {
@@ -106,18 +98,123 @@ nav .dropdown-content p:hover {
     font-weight: bold;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 20px 10px 20px;
+    margin: 20px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.posting {
+    padding: 5px 20px 20px 20px;
+}
+
+.posting header h2 {
+    font-family: 'Shippori Mincho', 'Times New Roman', serif;
+    text-align: justify;
+}
+.posting header p {
+    font-size: 10pt;
+}
+
+.posting section img {
+    width: 100%;
+}
+
+.profile img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.category h2, .profile h2 {
+    font-family: 'Truculenta', sans-serif;
+}
+
+.aside-right {
+    float: right;
+    width: 25%;
+}
+
+.post-content {
+    width: 75%;
+}
+
+.collapsible {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #dadada;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+  
+.content {
+    padding: 0;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.content li {
+    list-style-type: none;
+    padding: 20px;
+    margin-left: -10px;
+}
+
+.content li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 footer {
     padding: 20px;
-    color: white;
-    background-color: #00a2c6;
+    background-color: white;
     text-align: center;
     font-weight: bold;
 }
 
 footer a {
-    color: white;
+    color: black;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        padding: 0;
+    }
+
+    .post-content, .aside-right {
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+
+    main {
+        display: inline-block;
+        margin: 100px 0px;
+    }
 }
